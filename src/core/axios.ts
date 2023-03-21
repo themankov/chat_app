@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const API_URL = 'http://localhost:7000/';
+export const API_URL = 'https://chat-app-backend-7dsr.onrender.com/';
 
 const api = axios.create({
   withCredentials: true,
