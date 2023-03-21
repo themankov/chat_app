@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:7000', {
+const socket = io('https://chat-app-backend-7dsr.onrender.com', {
   withCredentials: true,
 });
 
