@@ -84,7 +84,7 @@ const MessagePlace = () => {
     socket.on('GET_DELETED_MESSAGE', (data) => {
       dispatch(Actions.deleteMessage(data.message_id));
     });
-    if (socket.id) return;
+    
     socket.on('UPDATE_MESSAGE', (data) => {
       if (data.dialogid === store.getState().DialogsReducer.currentDialog) {
         //   let reader = new FileReader();
