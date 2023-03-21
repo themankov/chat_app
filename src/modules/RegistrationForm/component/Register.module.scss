@@ -1,0 +1,50 @@
+.registration_form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem 5rem;
+  text-align: start;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .success_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    svg {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 3rem;
+      padding-bottom: 23rem;
+    }
+  }
+  .register_links {
+    a {
+      font-size: 1rem;
+
+      color: black;
+    }
+  }
+  button {
+    background-color: rgb(204, 247, 167);
+    color: black;
+    padding: 1rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  }
+  .error {
+    color: red;
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,51 @@
+.chat_item {
+  display: flex;
+  cursor: pointer;
+  gap: 1rem;
+  .dialog_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .dialog_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 0 1rem;
+    width: 13rem;
+    overflow: hidden;
+    h1 {
+      max-width: 13rem;
+      font-size: 1.2rem !important;
+    }
+    .last_message {
+      max-height: 2.7rem;
+      max-width: 13rem;
+    }
+  }
+  .dialog_help_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+
+    .Messages_count {
+      background-color: rgb(95, 222, 255);
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    .opacity {
+      opacity: 0;
+    }
+  }
+}
+.line {
+  width: 80%;
+  background-color: rgb(204, 200, 200);
+  height: 0.1rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,159 @@
+.message_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .reverse {
+    align-items: end;
+  }
+  .message_block {
+    display: flex;
+    flex-direction: column;
+  }
+  .message_avatar {
+    transform: scale(0.8);
+    top: 18%;
+    position: relative;
+    aspect-ratio: 1;
+    div::after {
+      content: none;
+    }
+  }
+  .message_content {
+    word-wrap: break-word;
+    max-width: 40rem;
+    display: flex;
+    align-items: end;
+    gap: 0.8rem;
+
+    .message__audio {
+      position: relative;
+
+      .message__audio_progress {
+        position: absolute;
+        background-color: rgb(103, 140, 95);
+        height: calc(100% + 1rem);
+        top: -0.5rem;
+        left: -1rem;
+        transition: all 0.4s;
+      }
+      .message__audio_info {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        .message__audio_duration {
+          width: 25%;
+          background-color: transparent;
+          animation: none;
+        }
+        .message__audio_wave {
+          width: 4rem;
+          height: 1rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(3);
+          }
+        }
+        .message__audio_btn {
+          .is_pressed {
+            img {
+              transform: translate(-53%, -50%);
+            }
+          }
+          button {
+            width: 2rem;
+
+            border-radius: 50%;
+            outline: none;
+            border: none;
+            aspect-ratio: 1;
+            position: relative;
+            z-index: 2;
+            background-color: rgb(108, 160, 97);
+            cursor: pointer;
+            img {
+              width: 65%;
+              height: 65%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-45%, -50%);
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+    .message_content_text {
+      font-size: 1.5rem;
+      background-color: rgb(204, 247, 167);
+      border-radius: 1.5rem 1.5rem 1.5rem 0;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      overflow: hidden;
+
+      span {
+        height: 13px;
+        width: 13px;
+        display: inline-block;
+        margin: 0 3px;
+        background-color: #9e9ea1;
+
+        border-radius: 50%;
+        opacity: 0.4;
+        @for $i from 1 through 3 {
+          &:nth-of-type(#{$i}) {
+            animation: 1s blink infinite ($i * 0.3333s);
+          }
+        }
+      }
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .message_check {
+    width: 2rem;
+    aspect-ratio: 1;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .message_content_image {
+    width: 5rem;
+    aspect-ratio: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .message_content_primary_image {
+    width: 9rem;
+    aspect-ratio: 1;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.message_reverse {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  .message_content {
+    flex-direction: row-reverse;
+    .message_content_text {
+      font-size: 1.5rem;
+      background-color: rgb(139, 169, 220);
+      border-radius: 1.5rem 1.5rem 0 1.5rem;
+    }
+  }
+}

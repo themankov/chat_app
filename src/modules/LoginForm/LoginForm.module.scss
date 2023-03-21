@@ -1,0 +1,24 @@
+.login_form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem 5rem;
+  text-align: start;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .login_links {
+    a {
+      font-size: 1rem;
+
+      color: black;
+    }
+  }
+}

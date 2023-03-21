@@ -1,0 +1,116 @@
+.spinner {
+  margin: auto;
+}
+.messages {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+  width: 65%;
+  padding-top: 17rem;
+  padding-bottom: 17rem;
+}
+.current_dialog_header {
+  position: fixed;
+  display: flex;
+  z-index: 5;
+  align-items: center;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+  width: 66vw;
+  margin-left: 27vw;
+  background-color: rgba(255, 255, 255, 1);
+  .header_icons {
+    button {
+      position: relative;
+      top: -15%;
+      color: black;
+    }
+  }
+  div::after {
+    content: none;
+  }
+  .header_icons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .header_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+  svg {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+.input_block {
+  padding: 3rem 2rem;
+  background-color: white;
+  position: absolute;
+  height: 10rem;
+  z-index: 19;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 27vw;
+  width: 66vw;
+  gap: 3rem;
+  .emoji {
+    display: flex;
+    gap: 2rem;
+    .icon_audio_recording {
+      background-color: green;
+    }
+    .icon_audio_disabled {
+      pointer-events: none;
+    }
+    .icon {
+      background-color: rgb(205, 207, 202);
+      border-radius: 50%;
+      width: 3rem;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    svg {
+      font-size: 2rem;
+      color: black;
+    }
+  }
+}
+
+.current_dialog_header_empty {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+  justify-content: center;
+  width: 66vw;
+  margin-left: 27vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  .exit {
+    position: absolute;
+    right: 0;
+    padding-top: 3rem;
+    svg {
+      color: black;
+      font-size: 2rem;
+    }
+  }
+}
+.empty {
+  margin: auto;
+}
+.picker_container {
+  position: absolute;
+  top: -320%;
+  right: 5%;
+}
