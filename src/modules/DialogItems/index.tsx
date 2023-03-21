@@ -55,11 +55,11 @@ const DialogItems: React.FC = () => {
         DialogActions.updateDialogUnreadMessages({ dialogid, dialogs, count })
       );
     });
-    if (!socket.id) {
+   
       socket.on('GET_CREATED_DIALOG', (data) => {
         dispatch(DialogActions.setDialogs([data]));
       });
-    }
+   
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
