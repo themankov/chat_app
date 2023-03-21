@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       window.history.pushState('data', 'string', '/');
       AuthHttp.checkAuth();
     }
-    if (socket.id) return;
+   
     socket.on('USER_OFFLINE', (data) => {
       dispatch(
         UserActions.updateUserOnline(
